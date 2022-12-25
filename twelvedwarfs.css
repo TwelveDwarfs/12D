@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Caveat&family=Courgette&family=Crimson+Text&family=Dancing+Script:wght@400;436&family=Fredoka+One&family=Grape+Nuts&family=Homemade+Apple&family=Inconsolata:wght@300&family=Indie+Flower&family=Inter:wght@200&family=Josefin+Sans&family=Jura&family=Libre+Baskerville&family=Mansalva&family=Mukta&family=Mulish&family=Outfit&family=Prompt&family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: animate 20s ease-in-out infinite;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@keyframes animate {
+  0%,100% {
+    background-image: url(bg2.jpg);
+  }
+  33.3% {
+    background-image: url(bg3.jpg);
+  }
+  66.6% {
+    background-image: url(bg4.jpg);
+  }
+}
+
+.judul {
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+  margin-top: 50px;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2.5px;
+  padding-bottom: 30px;
+}
+
+.roundppl img {
+  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pplbox {
+  width: 90%;
+  /* background: red; */
+  margin: 120px auto;
+  
+}
+
+.firstrow, .secondrow, .thirdrow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.secondrow, .thirdrow {
+  margin-top: 30px;
+}
+
+h2 {
+  font-family: 'Indie flower', Sans-Serif;
+}
+
+.hovertext {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  top: -110px;
+  opacity: 0;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.roundppl:hover .hovertext {
+  opacity: 0.9;
+  transform: translateY(-10px);
+}
+
+.roundppl img:hover {
+  opacity: .8;
+  transform: translateY(-10px);
+}
+
+header li {
+  display: flex;
+  /* align-items: center; */
+}
+
+header ul {
+  /* position: absolute; */
+  /* right: 70px; */
+  justify-content: space-between;
+  display: flex;
+  /* top: 18px; */
+  width: 20%;
+  /* margin: 18px auto; */
+  align-items: center;
+  /* text-align: center; */
+  /* background: red; */
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Prompt', Sans-Serif;
+  font-size: 17px;
+  opacity: 0.7;
+  transition: opacity .2s ease-in-out;
+}
+
+header a:hover {
+  opacity: 1;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  background: rgba(0, 0, 0, .5);
+  z-index: 10000;
+  backdrop-filter: blur(7px);
+  justify-content: center;
+}
+
+.firstpara {
+  font-family: 'Prompt', Sans-Serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.abtsection {
+  margin-top: -70px;
+}
+
+.textabout {
+  color: rgba(0, 0, 0, 0.5);  
+  width: 80%;
+  margin: 1px auto;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+.birthday {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.bdaylist {
+  padding: 20px;
+  line-height: 1.9em;
+  font-family: 'Prompt', Sans-Serif;
+  display: flex;
+  justify-content: left;
+  margin-left: 84px;
+}
+
+/*SAMSUNG MEDIA SCREEN*/
+@media only screen and (max-width: 600px) {
+  .judul {
+    font-size: 28px;
+    /* margin-top: -20px; */
+  }
+  
+  header {
+    height: 5.7vh;
+  }
+  
+  header ul {
+    /* position: absolute;
+    top: -7px;
+    left: 31%; */
+    /* gap: 20px; */
+    /* text-align: center; */
+    /* margin: 13px auto; */
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* background: red; */
+  }
+  
+  .pplbox {
+    margin-top: 50px;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    /* background: red; */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .firstrow, .secondrow, .thirdrow {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  
+  .secondrow, .thirdrow {
+    margin-top: -20px;
+  }
+    
+  .pplbox h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: -9px;
+  }
+  
+  .birthday {
+    font-size: 16px;
+    margin-left: 9px;
+  }
+  
+  .bdayspan1 {
+    color: red;
+  }
+  
+  .bdayspan2 {
+    color: orange;
+  }
+  
+  .bdayspan3 {
+    color: yellow;
+  }
+  
+  .bdayspan4 {
+    color: green;
+  }
+  
+  .bdayspan5 {
+    color: blue;
+  }
+  
+  .bdayspan6 {
+    color: indigo;
+  }
+  
+  .bdayspan7 {
+    color: purple;
+  }
+  
+  .bdayspan8 {
+    color: darkpurple;
+  }
+  
+  .birthday span {
+    display: none;
+  }
+  
+  .birthday div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bdaylist {
+    /* width: 100%; */
+    margin-left: 18px;
+    font-size: 14px;
+  }
+}
+
+/*SAMSUNG MEDIA SCREEN END*/
+
+/* LAPTOP MEDIA SCREEN */
+/* @media only screen and (min-width: 992px) {
+  header {
+    height: 9vh;
+  }
+} */
+/* LAPTOP MEDIA SCREEN END */
